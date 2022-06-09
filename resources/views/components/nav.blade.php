@@ -27,9 +27,22 @@
             <a class="nav-link disabled">Disabled</a>
           </li>
         </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
+        @if (Auth::user())
+        <form method="POST" action="{{ route('logout') }}" x-data>
+            @csrf
+
+            <x-jet-dropdown-link href="{{ route('logout') }}"
+                     @click.prevent="$root.submit();">
+                {{ __('Log Out') }}
+            </x-jet-dropdown-link>
+        @else
+        <span><a href="{{ route('logout') }}">Login</span> || <span><a href="{{ route('register') }}">Register</span>
+
+        @endif
+          {{-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button> --}}
+
+        </form>
         </form>
       </div>
     </div>
