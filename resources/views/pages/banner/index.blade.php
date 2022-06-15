@@ -4,15 +4,15 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h1 class="page-title">My Todo List</h1>
+                <h1 class="page-title">My Banner List</h1>
             </div>
             <div class="col-lg-12 mt-5">
-                <form action="{{ route('todo.store') }}" method="post">
+                <form action="{{ route('banner.store') }}" method="post">
                     @csrf
                     <div class="row">
                         <div class="col-lg-8">
                             <div class="form-group">
-                                <input class="form-control" name="title" type="text" placeholder="Enter Task" >
+                                <input class="form-control" name="title" type="text" placeholder="Enter banner" >
                             </div>
                         </div>
                         <div class="col-lg-4">
@@ -33,12 +33,12 @@
                           </tr>
                         </thead>
                         <tbody>
-                            @foreach ($tasks as $key => $task)
+                            @foreach ($banners as $key => $banner)
                             <tr>
                                 <th scope="row">{{ ++$key }}</th>
-                                <td>{{ $task->title }}</td>
+                                <td>{{ $banner->title }}</td>
                                 <td>
-                                    @if ($task->done == 0)
+                                    @if ($banner->done == 0)
                                         <span class="badge bg-warning">Not Completed</span>
 
                                     @else
@@ -48,8 +48,8 @@
 
                                 </td>
                                 <td>
-                                    <a href="{{ route('todo.delete',$task->id) }}" class="btn btn-danger"><i class="far fa-trash-alt"></i></a>
-                                    <a href="{{ route('todo.done',$task->id) }}" class="btn btn-success"><i class="far fa-check-circle"></i></a>
+                                    <a href="{{ route('todo.delete',$banner->id) }}" class="btn btn-danger"><i class="far fa-trash-alt"></i></a>
+                                    <a href="{{ route('todo.done',$banner->id) }}" class="btn btn-success"><i class="far fa-check-circle"></i></a>
                                 </td>
                               </tr>
                             @endforeach
