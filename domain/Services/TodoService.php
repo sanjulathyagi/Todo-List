@@ -39,12 +39,11 @@ class TodoService
     }
 
 
-    public function done($task_id)
+    public function status($task_id)
     {
         $task = $this->task->find($task_id);
         $task->done = 1;
         $task->update();
-
         // return redirect()->back();
     }
 }

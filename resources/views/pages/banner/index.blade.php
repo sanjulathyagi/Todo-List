@@ -12,8 +12,13 @@
                     <div class="row">
                         <div class="col-lg-8">
                             <div class="form-group">
-                                <input class="form-control" name="title" type="text" placeholder="Enter banner" >
+                                <input class="form-control" name="title" type="text" placeholder="Enter banner title" >
                             </div>
+                            <div class="form-group mt-5">
+                                <input class="form-control" name="images" type="file" placeholder="Enter banner image"
+                                accept="image/jpeg ,image/png ,image/jpg" >
+                            </div>
+
                         </div>
                         <div class="col-lg-4">
                             <button class="btn btn-success">Submit</button>
@@ -48,8 +53,8 @@
 
                                 </td>
                                 <td>
-                                    <a href="{{ route('todo.delete',$banner->id) }}" class="btn btn-danger"><i class="far fa-trash-alt"></i></a>
-                                    <a href="{{ route('todo.done',$banner->id) }}" class="btn btn-success"><i class="far fa-check-circle"></i></a>
+                                    <a href="{{ route('banner.delete',$banner->id) }}" class="btn btn-danger"><i class="far fa-trash-alt"></i></a>
+                                    <a href="{{ route('banner.status',$banner->id) }}" class="btn btn-success"><i class="far fa-check-circle"></i></a>
                                 </td>
                               </tr>
                             @endforeach
