@@ -2,7 +2,7 @@
 
 namespace domain\Facades;
 
-use Domain\services\BannerService;
+use domain\services\BannerService;
 use Illuminate\Support\Facades\Facade;
 
 class BannerFacade extends Facade
