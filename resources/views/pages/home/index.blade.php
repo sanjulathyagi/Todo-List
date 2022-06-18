@@ -7,6 +7,17 @@
                 <h1 class="page-title">Home Page</h1>
             </div>
         </div>
+        <div class="row justify-content-center">
+            @forelse ($banners as banner)
+            <div class="col lg-4">
+                <img src = "{{ config('images.access_path') }}/{{ $banner->images->name }}" alt="banner image"></td>
+            </div>
+            @empty
+            <div class="col lg-12">
+                <h2 class ="text-danger">No banner found</h2>
+            </div>
+            @endforelse
+        </div>
     </div>
 
 

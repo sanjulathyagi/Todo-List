@@ -20,4 +20,9 @@ class Banner extends Model
         return $this->hasOne(Image::class, 'id', 'image_id');
     }
 
+    public function allActive()
+    {
+        return $this->where('status', 1)->get();
+    }
+
 }

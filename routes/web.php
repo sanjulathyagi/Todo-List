@@ -31,7 +31,7 @@ Route::prefix('/banner',)->group(function () {
     Route::get('/', [BannerController::class, "index"])->name('banner');
     Route::post('/store', [BannerController::class, "store"])->name('banner.store');
     Route::get('/{banner_id}/delete', [BannerController::class, "delete"])->name('banner.delete');
-    Route::get('/{banner_id}/done', [BannerController::class, "status"])->name('banner.status');
+    Route::get('/{banner_id}/status', [BannerController::class, "status"])->name('banner.status');
 
 });
 

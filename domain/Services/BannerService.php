@@ -18,6 +18,10 @@ class BannerService
     {
         return $this->banner->all();
     }
+    public function allActive()
+    {
+        return $this->banner->allActive();
+    }
 
     public function store($data)
     {
