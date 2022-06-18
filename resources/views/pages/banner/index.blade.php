@@ -43,7 +43,7 @@
                             <tr>
                                 <th scope="row">{{ ++$key }}</th>
                                 <td>{{ $banner->title }}</td>
-                                <td><img src = "{{ config('images.access_path') }}/thumb/35x35/{{ $banner->images }}" alt="" width="100px"></td>
+                                <td><img src = "{{ config('images.access_path') }}/thumb/35x35/{{ $banner->images }}" alt="" class="banner-img" width="100px"></td>
                                 <td>
                                     @if ($banner->status == 0)
                                         <span class="badge bg-warning">Draft</span>
@@ -83,6 +83,10 @@
         padding-top:5vh;
         color:rgb(139, 32, 32);
         font-size:5rem;
+    }
+
+    .banner-img{
+        height: 60px;
     }
 </style>
 
