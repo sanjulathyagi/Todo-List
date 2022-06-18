@@ -37,9 +37,13 @@ class BannerService
     public function status($banner_id)
     {
         $banner = $this->banner->find($banner_id);
-        $banner->done = 1;
+        if ($banner->status == 0){
+            $banner->status == 1;
+            $banner ->update();
+        }else{
+        $banner->status = 0;
         $banner->update();
-
+        }
 
     }
 }
