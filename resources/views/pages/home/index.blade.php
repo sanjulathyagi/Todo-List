@@ -39,6 +39,9 @@
         font-size: 5rem;
         color: #0a0aaf
     }
+    .banner-image{
+        max-height:15rem;
+    }
 
 </style>
 

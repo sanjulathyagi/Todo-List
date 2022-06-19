@@ -15,7 +15,7 @@
                                 <input class="form-control" name="title" type="text" placeholder="Enter banner title" >
                             </div>
                             <div class="form-group mt-5">
-                                <input class="form-control" name="images" type="file"
+                                <input class="form-control dropify" name="images" type="file"
                                 accept="image/jpeg ,image/png ,image/jpg" >
                             </div>
 
