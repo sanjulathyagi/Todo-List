@@ -89,5 +89,9 @@
         height: 60px;
     }
 </style>
+@push('js')
+<script>
+    $('.dropify').dropify();
+</script>
 
 @endpush
