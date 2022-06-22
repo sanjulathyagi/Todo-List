@@ -92,6 +92,10 @@
     .dropify-message p{
         color:red;
     }
+
+    .dropify-render img{
+        margin:auto;
+    }
 </style>
 @push('js')
 <script>
