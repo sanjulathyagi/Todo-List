@@ -88,6 +88,10 @@
     .banner-img{
         height: 60px;
     }
+
+    .dropify-message p{
+        color:red;
+    }
 </style>
 @push('js')
 <script>
