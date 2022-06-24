@@ -99,7 +99,7 @@
 </style>
 @push('js')
 <script>
-    $('.dropify').dropify();
+    // $('.dropify').dropify();
 </script>
 
 @endpush
