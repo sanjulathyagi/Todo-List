@@ -7,7 +7,7 @@
                 <h1 class="page-title">Home Page</h1>
             </div>
         </div>
-        <div class="row justify-content-center">
+        {{-- <div class="row justify-content-center">
             @forelse ($banners as banner)
             <div class="col lg-4">
                 <div class="card">
@@ -25,7 +25,7 @@
                 <h2 class ="text-danger">No banner found</h2>
             </div>
             @endforelse
-        </div>
+        </div> --}}
     </div>
 
 
