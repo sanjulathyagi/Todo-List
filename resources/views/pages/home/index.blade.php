@@ -34,11 +34,11 @@
 @push('css')
 
 <style>
-    .page-title{
+    /* .page-title{
         padding-top:10vh;
         font-size: 5rem;
         color: #0a0aaf
-    }
+    } */
     .banner-image{
         max-height:15rem;
     }
