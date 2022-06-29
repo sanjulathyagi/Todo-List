@@ -7,7 +7,7 @@
                 <h1 class="page-title">Home Page</h1>
             </div>
         </div>
-        {{-- <div class="row justify-content-center">
+        <div class="row justify-content-center">
             @forelse ($banners as banner)
             <div class="col lg-4">
                 <div class="card">
@@ -15,8 +15,8 @@
                     class="banner-image-card-img-top">
                     <div class="card-body">
                       <h5 class="card-title">{{ $banner->title }}</h5>
-                      {{-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a> --}}
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
                     </div>
                   </div>
             </div>
@@ -25,7 +25,7 @@
                 <h2 class ="text-danger">No banner found</h2>
             </div>
             @endforelse
-        </div> --}}
+        </div>
     </div>
 
 
