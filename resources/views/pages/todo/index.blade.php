@@ -50,7 +50,7 @@
                                 <td>
                                     <a href="{{ route('todo.delete',$task->id) }}" class="btn btn-danger"><i class="far fa-trash-alt"></i></a>
                                     <a href="{{ route('todo.done',$task->id) }}" class="btn btn-success"><i class="far fa-check-circle"></i></a>
-                                    <a href="javascript:void(0)" class="btn btn-success"><i class="far fa-pencil"></i></a>
+                                    <a href="javascript:void(0)" class="btn btn-success" data-bs-toggle="modal"><i class="far fa-pencil"></i></a>
                                 </td>
                               </tr>
                             @endforeach
@@ -61,15 +61,15 @@
         </div>
     </div>
 
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal fade" id="staticEdit" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
-              <h1>modal</h1>
+            <div class="modal-body" id="taskEditContent">
+
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
