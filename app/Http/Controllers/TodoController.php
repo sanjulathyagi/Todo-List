@@ -37,4 +37,10 @@ class TodoController extends ParentController
         TodoFacade::done($task_id);
         return redirect()->back();
     }
+
+    public function edit(Request $request)
+    {
+        $response['tasks'] =TodoFacade::get($request['task_id']);
+        return view('pages\todo\edit')->with($response);
+    }
 }
