@@ -7,7 +7,7 @@
                 <h1 class="page-title">My Todo List</h1>
             </div>
             <div class="col-lg-12 mt-5">
-                <form action="{{ route('todo.store') }}" method="post">
+                <form action="{{ route('todo.store') }}" method="post" entype="multipart/form">
                     @csrf
                     <div class="row">
                         <div class="col-lg-8">

@@ -79,7 +79,7 @@
 
 @push('css')
 <style>
-    /* /* .page-title {
+    .page-title {
         padding-top:5vh;
         color:rgb(139, 32, 32);
         font-size:5rem;
@@ -95,8 +95,8 @@
 
     .dropify-render img{
         margin:auto;
-    } */
-</style> */
+    } 
+</style>
 @push('js')
 <script>
     $('.dropify').dropify();
