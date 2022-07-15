@@ -95,7 +95,7 @@
 
     .dropify-render img{
         margin:auto;
-    } 
+    }
 </style>
 @push('js')
 <script>

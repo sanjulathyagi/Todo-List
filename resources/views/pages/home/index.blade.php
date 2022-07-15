@@ -8,7 +8,7 @@
             </div>
         </div>
         <div class="row justify-content-center">
-            @forelse ($banners as banner)
+            @forelse ($banners as $banner)
             <div class="col lg-4">
                 <div class="card">
                     <img src = "{{ config('images.access_path') }}/{{ $banner->images->name }}" class="banner-image" alt="banner image"
