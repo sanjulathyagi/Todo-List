@@ -12,7 +12,7 @@
                     <div class="row">
                         <div class="col-lg-8">
                             <div class="form-group">
-                                <input class="form-control" name="title" type="text" placeholder="Enter Task" >
+                                <input class="form-control" name="title" type="text" placeholder="Enter Task" required>
                             </div>
                         </div>
                         <div class="col-lg-4">
@@ -48,9 +48,14 @@
 
                                 </td>
                                 <td>
-                                    <a href="{{ route('todo.delete',$task->id) }}" class="btn btn-danger"><i class="far fa-trash-alt"></i></a>
-                                    <a href="{{ route('todo.done',$task->id) }}" class="btn btn-success"><i class="far fa-check-circle"></i></a>
-                                    <a href="javascript:void(0)" class="btn btn-success" data-bs-toggle="modal"><i class="far fa-pencil" data-bs-toogle="modal" data-bs-target="#staticBackdrop"></i></a>
+                                    <a href="{{ route('todo.delete',$task->id) }}" class="btn btn-danger">
+                                        <i class="far fa-trash-alt"></i></a>
+                                    <a href="{{ route('todo.done',$task->id) }}" class="btn btn-success">
+                                        <i class="fas fa-check-circle"></i></a>
+                                    <a href="javascript:void(0)" class="btn btn-info" >
+                                        <i class="fas fa-pencil" onclick="taskEditmodal({){ $task->id }})"></i></a>
+                                    <a href="{{ route('todo.sub',$task->id) }}" class="btn btn-dark">
+                                        <i class="fas fa-arrow-right"></i></a>
                                 </td>
                               </tr>
                             @endforeach
@@ -61,11 +66,11 @@
         </div>
     </div>
 
-    <div class="modal fade" id="staticEdit" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal fade" id="taskEdit" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="taskEditLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+              <h5 class="modal-title" id="taskEditLabel">Main Task Edit</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body" id="taskEditContent">
@@ -89,5 +94,32 @@
         font-size:5rem;
     }
 </style>
+
+@endpush
+
+@push('js')
+<script>
+    function taskEditModal(task_id)
+    {
+        var data = {
+            task_id: task_id,
+        };
+        s.ajax({
+            url:"{{ route('todo.edit') }}",
+            headers; {
+                'X-CSRF-TOKEN' :$('meta[name="csrf-token"]').attr('content')
+            },
+            type: 'GET',
+            dataType: '',
+            data: data,
+            success: function (response){
+                $('#taskEdit').modal('show');
+                $('#taskEditContent').html('response');
+            }
+         });
+
+
+    }
+</script>
 
 @endpush

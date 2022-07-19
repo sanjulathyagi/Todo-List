@@ -13,6 +13,11 @@ class TodoService
         $this->task = new Todo();
     }
 
+    public function get($task_id)
+    {
+        $task = $this->task->find($task_id);
+    }
+
     public function all()
     {
         return $this->task->all();
@@ -45,6 +50,21 @@ class TodoService
         $task->done = 1;
         $task->update();
         // return redirect()->back();
+    }
+
+    public function update(array $data, $task_id)
+    {
+        $task = $this->task->find($task_id);
+        $task->update($this->edit($task, $data));
+
+        //$task->title = $data['title'];
+        // $task->update();
+
+    }
+
+    protected function edit(Todo $task, $data)
+    {
+        return array_merge($task->toArray(), $data);
     }
 }
 
