@@ -46,20 +46,21 @@
                                         </div>
                                         <div class="col-lg-4">
                                             <div class="form-group">
-                                                <input class="form-control" name="phone" type="number" placeholder="Enter phone number" required>
+                                                <textarea name="note" id="note" cols="30" rows="10" placeholder="Enter Note"
+                                                required="required" class="form-control">
+                                                </textarea>
                                             </div>
-
                                         </div>
                                         <div class="col-lg-4">
                                             <div class="form-group">
-                                                <input class="form-control" name="phone" type="number" placeholder="Enter phone number" required>
+                                                <input class="form-control" name="date" type="date"
+                                                placeholder="Enter date" required>
                                             </div>
-
                                         </div>
                                     </div>
-
                                 </div>
-                                <div class="col-lg-4 mt-5 text-center">
+                                <div class="col-lg-12 mt-3 text-center">
+                                    <input type="hidden" name="task_id" value="{{ $task->id }}">
                                     <button type="submit" class="btn btn-success">Submit</button>
                                 </div>
                             </div>

@@ -14,6 +14,8 @@ class subTask extends Model
         'priority',
         'note',
         'date',
+        'task_id',
+
 
     ];
 
