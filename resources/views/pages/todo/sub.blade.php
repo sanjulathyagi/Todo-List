@@ -22,13 +22,15 @@
                                     <div class="row">
                                         <div class="col-lg-6">
                                             <div class="form-group">
-                                                <input class="form-control" name="sub_title" type="text" placeholder="Enter sub Title" required>
+                                                <input class="form-control" name="sub_title" type="text"
+                                                 placeholder="Enter sub Title" required maxlength="20">
                                             </div>
 
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="form-group">
-                                                <input class="form-control" name="phone" type="number" placeholder="Enter phone number" required>
+                                                <input class="form-control" name="phone" type="number" placeholder="Enter phone number" required maxlength="10"
+                                                oninput="javascript: if (this.value.length > this.maxlength) this.value = this.value.slice(0, this.maxlength);">
                                             </div>
                                         </div>
                                     </div>
@@ -75,13 +77,25 @@
                         <thead>
                           <tr>
                             <th scope="col">#</th>
-                            <th scope="col">Title</th>
-                            <th scope="col">Status</th>
-                            <th scope="col">Action</th>
+                            <th scope="col">Sub Title</th>
+                            <th scope="col">Phone</th>
+                            <th scope="col">Priority</th>
+                            <th scope="col">Note</th>
+                            <th scope="col">Date</th>
                           </tr>
                         </thead>
                         <tbody>
+                            @foreach ($sub_tasks as $key => $sub_task)
+                            <tr>
+                                <td>{{ ++key }}</td>
+                                <td>{{ $sub_task->sub_title }}</td>
+                                <td>{{ $sub_task->phone }}</td>
+                                <td>{{ $sub_task->priority }}</td>
+                                <td>{{ $sub_task->note }}</td>
+                                <td>{{ $sub_task->date }}</td>
+                            </tr>
 
+                            @endforeach
                         </tbody>
                       </table>
                 </div>

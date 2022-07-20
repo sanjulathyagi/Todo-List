@@ -52,7 +52,8 @@ class TodoController extends ParentController
 
     public function sub($task_id)
     {
-        $response['tasks'] =TodoFacade::get('task_id');
+        $response['tasks'] =TodoFacade::get('$task_id');
+        $response['sub_tasks'] =TodoFacade::getSubTasksByTask('$task_id');
         return view('pages.todo.sub')->with($response);
     }
 

@@ -19,4 +19,9 @@ class subTask extends Model
 
     ];
 
+    public function getSubTasksByTask($task_id)
+    {
+        return $this->where('task_id,$task_id')->get();
+    }
+
 }
