@@ -8,19 +8,60 @@
                 <h5 class="page-task-main">{{ $task->title }}</h5>
             </div>
             <div class="col-lg-12 mt-5">
-                <form action="{{ route('todo.store') }}" method="post" entype="multipart/form">
-                    @csrf
-                    <div class="row">
-                        <div class="col-lg-8">
-                            <div class="form-group">
-                                <input class="form-control" name="title" type="text" placeholder="Enter Task" required>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <button class="btn btn-success">Submit</button>
-                        </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h3>
+                            Create a new sub task
+                        </h3>
                     </div>
-                </form>
+                    <div class="card-body">
+                        <form action="{{ route('todo.sub.store') }}" method="post" entype="multipart/form">
+                            @csrf
+                            <div class="row pt-3">
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <input class="form-control" name="sub_title" type="text" placeholder="Enter sub Title" required>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <input class="form-control" name="phone" type="number" placeholder="Enter phone number" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row pt-4">
+                                        <div class="col-lg-4">
+                                            <div class="form-group">
+                                                <input class="form-control" name="sub_title" type="text" placeholder="Enter sub Title" required>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-group">
+                                                <input class="form-control" name="phone" type="number" placeholder="Enter phone number" required>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-group">
+                                                <input class="form-control" name="phone" type="number" placeholder="Enter phone number" required>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-lg-4 mt-5 text-center">
+                                    <button type="submit" class="btn btn-success">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
             </div>
             <div class="col-lg-12 mt-5">
                 <div>

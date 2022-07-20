@@ -2,6 +2,7 @@
 
 namespace Domain\services;
 
+use App\Models\subTask;
 use App\Models\Todo;
 
 class TodoService
@@ -11,6 +12,7 @@ class TodoService
     public function __construct()
     {
         $this->task = new Todo();
+        $this->sub = new subTask();
     }
 
     public function get($task_id)
@@ -66,6 +68,14 @@ class TodoService
     {
         return array_merge($task->toArray(), $data);
     }
-}
+
+
+    //SUB TASK SECTION
+
+    public function subStore($data)
+    {
+        $this->sub->create($data);
+    }
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
 
 
