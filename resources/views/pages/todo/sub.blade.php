@@ -35,7 +35,12 @@
                                     <div class="row pt-4">
                                         <div class="col-lg-4">
                                             <div class="form-group">
-                                                <input class="form-control" name="sub_title" type="text" placeholder="Enter sub Title" required>
+                                                <select name="priority"  id="priority" class="form-control">
+                                                    <option value="1">Priority 1 </option>
+                                                    <option value="2">Priority 2 </option>
+                                                    <option value="3">Priority 3 </option>
+                                                    <option value="4">Priority 4 </option>
+                                                </select>
                                             </div>
 
                                         </div>
