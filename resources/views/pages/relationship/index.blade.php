@@ -8,7 +8,7 @@
             </div>
         </div>
         <div class="row justify-content-center">
-           
+
         </div>
     </div>
 
@@ -20,8 +20,8 @@
 <style>
     .page-title{
         padding-top:10vh;
-        font-size: 5rem;
-        color: #0a0aaf
+        font-size: 3rem;
+        color: #0aaf78
     }
     .banner-image{
         max-height:15rem;
