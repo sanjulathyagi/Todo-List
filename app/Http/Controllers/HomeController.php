@@ -12,4 +12,10 @@ class HomeController extends Controller
         $response['banners'] = BannerFacade::allActive();
         return view('pages.home.index')->with($response);
     }
+
+    public function relationship()
+    {
+        $response['banners'] = BannerFacade::all();
+        return view('pages.relationship.index')->with($response);
+    }
 }
