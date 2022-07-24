@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\product;
 use domain\Facades\BannerFacade;
 use Illuminate\Http\Request;
 
@@ -15,7 +16,7 @@ class HomeController extends Controller
 
     public function relationship()
     {
-        $response['banners'] = BannerFacade::all();
+        $response['products'] = product::all();
         return view('pages.relationship.index')->with($response);
     }
 }
