@@ -29,9 +29,9 @@ class CategorySeeder extends Seeder
 
         ];
         foreach ($array as $value){
-            \App\Models\Category::create([
-                'name' => $value,
-            ]);
+            Category::create(
+               
+            );
         }
     }
 }
