@@ -9,8 +9,8 @@
         </div>
         <div class="row justify-content-center">
             @foreach ($products as $product)
-            <div class="col-md-4">
-                <div class="card">
+            <div class="col-md-4 mt-5 ">
+                <div class="card product-box">
                     <div class="card-body">
                         <h5 class="card-title">{{ $product->name }}</h5>
                         <p class="card-text">{{ $product->intro }}</p>
@@ -36,6 +36,9 @@
     }
     .banner-image{
         max-height:15rem;
+    }
+    .product-box{
+        background-color: #48a888
     }
 
 </style>
