@@ -14,6 +14,15 @@
                     <div class="card-body">
                         <h5 class="card-title">{{ $product->name }}</h5>
                         <p class="card-text">{{ $product->intro }}</p>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="card category-box">
+                                    <div class="card-body">
+                                        <h4>category</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -39,6 +48,9 @@
     }
     .product-box{
         background-color: #48a888
+    }
+    .category-box{
+        background-color:#d15321
     }
 
 </style>
