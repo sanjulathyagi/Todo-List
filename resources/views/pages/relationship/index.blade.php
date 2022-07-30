@@ -18,7 +18,7 @@
                             <div class="col-md-12">
                                 <div class="card category-box">
                                     <div class="card-body">
-                                        <h4>{{ $product->category }}</h4>
+                                        {{-- <h4>{{ $product->category }}</h4> --}}
                                     </div>
                                 </div>
                             </div>
