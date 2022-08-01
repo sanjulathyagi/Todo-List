@@ -7,7 +7,7 @@
                 <h1 class="page-title">Relationship page</h1>
             </div>
         </div>
-        {{-- <div class="row justify-content-center">
+        <div class="row justify-content-center">
             @foreach ($products as $product)
             <div class="col-md-4 mt-5 ">
                 <div class="card product-box">
@@ -25,7 +25,7 @@
                         </div>
                     </div>
                 </div>
-            </div> --}}
+            </div>
 
             @endforeach
 
