@@ -53,11 +53,11 @@
                                                 </textarea>
                                             </div>
                                         </div>
-                                        <div class="col-lg-4">
+                                        {{-- <div class="col-lg-4">
                                             <div class="form-group">
                                                 <input class="form-control" name="date" type="date"
                                                 placeholder="Enter date" required>
-                                            </div>
+                                            </div> --}}
                                         </div>
                                     </div>
                                 </div>
