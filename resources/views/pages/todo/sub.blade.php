@@ -46,13 +46,13 @@
                                             </div>
 
                                         </div>
-                                        {{-- <div class="col-lg-4">
+                                        <div class="col-lg-4">
                                             <div class="form-group">
                                                 <textarea name="note" id="note" cols="30" rows="10" placeholder="Enter Note"
                                                 required="required" class="form-control">
                                                 </textarea>
                                             </div>
-                                        </div> --}}
+                                        </div>
                                         <div class="col-lg-4">
                                             <div class="form-group">
                                                 <input class="form-control" name="date" type="date"
