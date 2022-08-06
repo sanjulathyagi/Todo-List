@@ -32,20 +32,22 @@
         </div> --}}
 
         <div class="row justify-content-center">
-            @foreach ($products as $product)
+            @foreach ($categories as $category)
             <div class="col-md-4 mt-5 ">
                 <div class="card product-box">
                     <div class="card-body">
-                        <h5 class="card-title">{{ $product->name }}</h5>
-                        <p class="card-text">{{ $product->intro }}</p>
+                        <h5 class="card-title">{{ $category->name }}</h5>
                         <div class="row">
-                            <div class="col-md-12">
+                            @foreach ($category->products as $product)
+                            <div class="col-md-4 mt-5">
                                 <div class="card category-box">
                                     <div class="card-body">
-                                        <h4>{{ $product->category }}</h4>
+                                        <h5 class="card-title">{{ $product->name }}</h5>
+                                        <p class="card-text">{{ $product->intro }}</p>
                                     </div>
                                 </div>
                             </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>

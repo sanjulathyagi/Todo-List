@@ -17,13 +17,18 @@ class product extends Model
 
     ];
 
-    public function category()
-    {
-        return $this->hasOne(category::class, 'id', 'category_id');
-    }
+    // public function category()
+    // {
+    //     return $this->hasOne(category::class, 'id', 'category_id');
+    // }
 
     // public function category()
     // {
     //     return $this->belongsTo(category::class, 'category_id', 'id');
     // }
+
+    public function category()
+    {
+        return $this->belongsToMany(category::class, 'productCategory::class', 'product_id', 'category_id');
+    }
 }
