@@ -44,6 +44,19 @@
                                     <div class="card-body">
                                         <h5 class="card-title">{{ $product->name }}</h5>
                                         <p class="card-text">{{ $product->intro }}</p>
+                                        <div class="row">
+                                            @foreach ($product->categories as $category)
+                                            <div class="col-md-12">
+                                                <div class="card category-box">
+                                                    <div class="card body">
+                                                        <h4>{{ $category->name }}</h4>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            @endforeach
+                                        </div>
                                     </div>
                                 </div>
                             </div>
