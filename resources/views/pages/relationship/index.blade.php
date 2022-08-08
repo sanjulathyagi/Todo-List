@@ -46,7 +46,7 @@
                                         <p class="card-text">{{ $product->intro }}</p>
                                         <div class="row">
                                             @foreach ($product->categories as $category)
-                                            <div class="col-md-12">
+                                            <div class="col-md-4 mt-3">
                                                 <div class="card category-box">
                                                     <div class="card body">
                                                         <h4>{{ $category->name }}</h4>
