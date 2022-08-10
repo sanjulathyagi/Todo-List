@@ -45,7 +45,7 @@
                                         <h5 class="card-title">{{ $product->name }}</h5>
                                         <p class="card-text">{{ $product->intro }}</p>
                                         <div class="row">
-                                            {{-- @foreach ($product->categories as $category)
+                                            @foreach ($product->categories as $category)
                                             <div class="col-md-4 mt-3">
                                                 <div class="card category-box">
                                                     <div class="card body">
@@ -55,7 +55,7 @@
 
                                             </div>
 
-                                            @endforeach --}}
+                                            @endforeach
                                         </div>
                                     </div>
                                 </div>
