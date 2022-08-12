@@ -38,7 +38,7 @@
                     <div class="card-body">
                         <h5 class="card-title">{{ $category->name }}</h5>
                         <div class="row">
-                            {{-- @foreach ($category->products as $product)
+                            @foreach ($category->products as $product)
                             <div class="col-md-4 mt-5">
                                 <div class="card category-box">
                                     <div class="card-body">
@@ -60,7 +60,7 @@
                                     </div>
                                 </div>
                             </div>
-                            @endforeach --}}
+                            @endforeach
                         </div>
                     </div>
                 </div>
